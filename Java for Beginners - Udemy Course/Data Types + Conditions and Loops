@@ -1,0 +1,227 @@
+/*
+THIS IS RAHUL MAWA LEARNING TO CODE IN JAVA.
+THIS IS FROM THE COURSE: 'JAVA TUTORIAL FOR BEGINNERS' ON UDEMY.
+
+THIS FILE HOPEFULLY SUMMARISES THE CONTENTS OF THIS COURSE INTO A PROGRAMMING FILE, 
+WHICH WILL MAKE IT EASIER FOR Y'ALL TO FOLLOW WHAT I HAVE LEARNT FROM THIS COURSE.
+
+~ BROUGHT TO YOU BY: RAHUL MAWA FROM JULY/AUGUST OF 2021  [F*CK COVID]
+*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        
+        //----------------------------------------------------------------------------
+        //HELLO WORLD PROGRAM
+        System.out.println("Hello World");
+        
+        //----------------------------------------------------------------------------
+        //USING VARIABLES IN JAVA + DATA TYPES
+        int myNumber;
+        myNumber = 96;
+        
+        short myShort = 69;
+        long myLong = 848038298;
+        
+        double myDouble = 3.141596;
+        float myFloat = 3.14f;
+        
+        char myChar = 'x';
+        boolean myBool = true;
+        byte myByte = 127;
+        
+        System.out.println(myNumber);
+        System.out.println(myShort);
+        System.out.println(myLong);
+        System.out.println(myDouble);
+        System.out.println(myFloat);
+        System.out.println(myChar);
+        System.out.println(myBool);
+        System.out.println(myByte);
+        
+        //----------------------------------------------------------------------------
+        //MORE ABOUT 'STRING' CLASS [STRING IS NOT A DATAYPE, IT'S A CLASS]
+        int i = 7;
+        String textrandom = "Ayyooo, what's up my guy..?";
+        
+        System.out.println(textrandom);
+        
+        String text = "Hello";
+        String blank = " ";
+        String name = "Rahul";
+        
+        String greeting = text + blank + name;
+        
+        System.out.println(greeting);
+        
+        System.out.println("My Integer the whole time was: " + i);
+        
+        
+        //----------------------------------------------------------------------------
+        //WHILE LOOPS
+        boolean myBool2 = 4 < 5;
+        System.out.println(myBool2);
+        
+        int myInt2 = 0;
+        
+        while(myInt2 < 10)
+        {
+            System.out.println("The current loop counter is at: " + myInt2);
+            myInt2 += 1;
+        }
+        
+        
+        //----------------------------------------------------------------------------
+        //FOR LOOPS
+        for(int a = 0; a < 5; a++)
+        {
+            //System.out.println("Hyeello no." + a);
+            System.out.printf("Hyeello no. %d", a);
+            //System.out.printf("Hyeello no. %d\n", a);
+        }
+        
+        
+        //----------------------------------------------------------------------------
+        //IF STATEMENTS
+        int myInt3 = 69;
+        System.out.println("");
+        
+        if(myInt3 != 69)
+        {
+            System.out.printf("Sorry boys, the integer variable does not contain 69\n");
+        }
+        
+        else
+        {
+            System.out.printf("CONGRATS BOYS!!! The integer variable contains %d !\n", myInt3);
+        }
+        
+        
+        
+        int myInt4 = 419;
+        
+        if(myInt4 == 420)
+        {;
+            System.out.println("JACKPOT: SNOOP DOGG will sing you to sleep on 4/20 2420");
+        }
+        
+        else if(myInt4 < 420)
+        {
+            System.out.println("You're should aim HIGHer to hit the jackpot! :(");
+        }
+        
+        else
+        {
+            System.out.println("You went a bit too HIGH for hitting the jackpot ;)");
+        }
+        
+        //----------------------------------------------------------------------------
+        //USER INPUT -- Scanner is a class
+        
+        Scanner myInput = new Scanner(System.in);
+        
+        System.out.println("Enter your Full Name: ");
+        String userFullName = myInput.nextLine();
+        
+        System.out.println("Lol, is your name really '" + userFullName + "' .. hahaha!!");
+        
+        
+        System.out.println("What's your age though..?");
+        int userAge = myInput.nextInt();
+        
+        if(userAge < 18)
+        {
+            System.out.println("So what, you're underaged too.. oh god!");
+        }
+        
+        else
+        {
+            System.out.printf("Alright, I am turning your age '%d' to machine code and saving it in my memory.\n", userAge);
+        }
+        
+        
+        
+        //----------------------------------------------------------------------------
+        //DO - WHILE LOOPS
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Let's play a GUESSING GAME!!!");
+        int value = 0;
+        
+        do 
+        {
+            System.out.println("Input your guess number: ");
+            value = scanner.nextInt();
+        }
+        while(value != 69420);
+        
+        System.out.println("69420 bisshhhhh");
+        
+        
+        //----------------------------------------------------------------------------
+        //SWITCH STATEMENTS
+        
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a command to operate this machine: ");
+        String commands = scan.nextLine();
+        
+        switch(commands)
+        {
+            case "start":
+                System.out.println("Machine has started.");
+                break;
+                
+            case "stop":
+                System.out.println("Machine has stopped.");
+                break;
+            
+            case "run":
+                System.out.println("Machine is running...");
+                break;
+                
+            default:
+                System.out.println("Command not recognised. Try 'start' / 'run' / 'stop'. Thx.");
+                break;
+        }
+        
+        
+        //----------------------------------------------------------------------------
+        //ARRAYS 
+        
+        int[] values = new int[3];
+        System.out.println(values[0]);
+        
+        values[0] = 10;
+        values[1] = 20;
+        values[2] = 30;
+        
+        System.out.println(values[0]);
+        System.out.println(values[1]);
+        System.out.println(values[2]);
+        
+        for(int z = 0; z < values.length; z++)
+        {
+            System.out.println(values[z]);
+        }
+        
+        int[] numbers = {5, 6, 7, 8};
+        
+        for(int h = 0; h < numbers.length; h++)
+        {
+            System.out.println(numbers[h]);
+        }
+        
+    }
+}
+
+/*
+So, this was the first file out of many other Java files that I will be practicing on, while learning this course.
+
+This file was just getting too long, and too much time to run (since we coded a couple programs that
+asked for input too many times) - it's getting annoying to test programs.
+
+So, I will see you in the next file. BYEEE!
+*/
